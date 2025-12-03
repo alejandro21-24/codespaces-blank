@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rutina Diaria para Pristaly 💖</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg,#fff0f6,#ffe6f1); margin:0; color:#4a2340 }
+    header{ text-align:center; padding:26px; background:linear-gradient(90deg,#ffb6d9,#ff86c1); color:white; font-size:26px; font-weight:700 }
+    .container{ max-width:780px; margin:20px auto; padding:20px }
+    .card{ background:white; border-radius:20px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.08); margin-bottom:18px }
+    .exercise{ display:flex; gap:14px; align-items:center; margin:12px 0 }
+    .exercise img{ width:110px; height:110px; object-fit:cover; border-radius:12px; border:3px solid #ffd0e6 }
+    .exercise .info{ color:#6a2440 }
+    .exercise .info h3{ margin:0 0 6px 0; color:#e64587 }
+    .exercise .info p{ margin:0; font-size:14px }
+    .motivation{ background:#fff0f6; padding:14px; border-radius:12px; text-align:center; color:#c61f63; font-weight:600 }
+    .day-title{ color:#c2185b; margin-bottom:8px }
+    footer{ text-align:center; padding:14px; color:#8a3a5b }
+    .hero{ display:flex; gap:18px; align-items:center }
+    .hero img{ width:120px; height:120px; border-radius:18px; object-fit:cover; border:4px solid #ffbfdc }
+    .btn{ width:100%; padding:12px; background:#ff5c8a; color:white; border:none; border-radius:12px; font-size:16px; cursor:pointer }
+    .small{ font-size:13px; color:#7a4a66 }
+  </style>
+</head>
+<body>
+  <header>💖 Rutina Diaria para Pristaly — Hecha con Amor 💖</header>
+  <div class="container">
+
+    <div class="card hero">
+      <img src="https://i.imgur.com/Qr6Yx1V.png" alt="Perfil Pristaly">
+      <div>
+        <h2 style="margin:0;color:#b71c58">Hola Pristaly 😍✨</h2>
+        <p class="small">Cada día una rutina diferente — nivel: Principiante. Mensajes románticos y emojis incluidos.</p>
+      </div>
+    </div>
+
+    <!-- Rutina del día -->
+    <div class="card">
+      <div class="day-title">✨ Tu rutina de hoy ✨</div>
+      <div id="exerciseList"></div>
+    </div>
+
+    <div class="card motivation" id="motivationBox">Eres mi inspiración, Pristaly 💕 Hoy te espero para celebrar tus logros.</div>
+
+    <button class="btn" onclick="newMotivation()">💞 Dame otra frase bonita 💞</button>
+
+    <footer>
+      <p class="small">Abre esta página a diario. Si quieres imágenes reales en el PDF, envíamelas y las incrusto.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Rutinas detalladas por día (lunes=1..domingo=0 for Date.getDay compatibility)
+    const routines = {
+      1: [
+        { name: "Sentadillas - 3x12", img: "https://i.imgur.com/yN1q3w7.png", desc: "Pies al ancho de hombros, baja controlando, mira al frente." },
+        { name: "Zancadas - 3x12 cada pierna", img: "https://i.imgur.com/VrCjm8F.png", desc: "Paso largo, rodilla no sobrepasa el pie, baja con control." },
+        { name: "Caminata 20 min", img: "https://i.imgur.com/zUm4W4K.png", desc: "Ritmo cómodo, respira profundo." }
+      ],
+      2: [
+        { name: "Crunches - 3x15", img: "https://i.imgur.com/pPj1lfb.png", desc: "Sube con el core, evita jalar cuello." },
+        { name: "Elevación de piernas - 3x12", img: "https://i.imgur.com/ZkqJNFN.png", desc: "Controla al subir y bajar, sin impulso." },
+        { name: "Plancha lateral 30s", img: "https://i.imgur.com/W1qo3JY.png", desc: "Cuerpo alineado, respira lento." }
+      ],
+      3: [
+        { name: "Puente de glúteo - 3x15", img: "https://i.imgur.com/7pk7gWZ.png", desc: "Aprieta glúteos arriba, baja suave." },
+        { name: "Patada hacia atrás - 3x12", img: "https://i.imgur.com/V8wkjmU.png", desc: "Mantén torso estable, controla el movimiento." },
+        { name: "Fire Hydrants - 3x15", img: "https://i.imgur.com/8DbYQdC.png", desc: "Movimiento lateral de cadera, sin rotar el torso." }
+      ],
+      4: [
+        { name: "Caminata rápida 25 min", img: "https://i.imgur.com/zUm4W4K.png", desc: "Incrementa ligeramente el ritmo para sudar." },
+        { name: "Jumping Jacks - 3x20", img: "https://i.imgur.com/3Yp4GQy.png", desc: "Aterriza suave, usa brazos para ritmo." },
+        { name: "Burpees 2x8", img: "https://i.imgur.com/1kXq3hV.png", desc: "Hazlos a ritmo cómodo, puedes simplificar sin salto." }
+      ],
+      5: [
+        { name: "Full Body - circuito 3 rondas", img: "https://i.imgur.com/4k7Pq3L.png", desc: "Sentadillas, flexiones modificadas, remo con banda - 12 reps cada ejercicio." },
+        { name: "Plancha 40s", img: "https://i.imgur.com/7vTIW8O.png", desc: "Cuerpo alineado, respira, aprieta abdomen." }
+      ],
+      6: [
+        { name: "Core + Glúteo", img: "https://i.imgur.com/6hTq4sJ.png", desc: "Abdominales suaves, puente de glúteo y caminata ligera." }
+      ],
+      0: [
+        { name: "Descanso Activo & Estiramientos", img: "https://i.imgur.com/5Xxq1Lk.png", desc: "15 min estiramiento, respiración y yoga suave." }
+      ]
+    };
+
+    const motivations = [
+      "Estoy tan orgulloso de ti, Pristaly 💖✨",
+      "Cada día eres más fuerte y hermosa 😍🔥",
+      "Tu disciplina me inspira, mi vida 💕💪",
+      "Nunca te rindas, princesa. Yo creo en ti 💓👑",
+      "Eres magia, mi amor ✨💞"
+    ];
+
+    function loadRoutine(){
+      const day = new Date().getDay(); // 0 domingo..6 sabado
+      const todayRoutine = routines[day] || [];
+      const container = document.getElementById('exerciseList');
+      container.innerHTML = '';
+      todayRoutine.forEach(ex => {
+        container.innerHTML += `
+          <div class="exercise">
+            <img src="${ex.img}" alt="${ex.name}">
+            <div class="info">
+              <h3>${ex.name} 💗</h3>
+              <p>${ex.desc}</p>
+            </div>
+          </div>`;
+      });
+    }
+
+    function newMotivation(){
+      const box = document.getElementById('motivationBox');
+      box.innerHTML = motivations[Math.floor(Math.random()*motivations.length)];
+    }
+
+    // carga inicial
+    loadRoutine();
+  </script>
+</body>
+</html>
