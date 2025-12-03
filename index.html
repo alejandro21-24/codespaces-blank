@@ -3,88 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rutina Diaria para Pristaly 💖</title>
+  <title>Programa Romántico de Ejercicio para Pristaly 💖</title>
   <style>
     body { font-family: 'Arial', sans-serif; background: linear-gradient(180deg,#fff0f6,#ffe6f1); margin:0; color:#4a2340 }
     header{ text-align:center; padding:26px; background:linear-gradient(90deg,#ffb6d9,#ff86c1); color:white; font-size:26px; font-weight:700 }
     .container{ max-width:780px; margin:20px auto; padding:20px }
     .card{ background:white; border-radius:20px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.08); margin-bottom:18px }
-    .exercise{ display:flex; gap:14px; align-items:center; margin:12px 0 }
-    .exercise img{ width:110px; height:110px; object-fit:cover; border-radius:12px; border:3px solid #ffd0e6 }
-    .exercise .info{ color:#6a2440 }
-    .exercise .info h3{ margin:0 0 6px 0; color:#e64587 }
-    .exercise .info p{ margin:0; font-size:14px }
-    .motivation{ background:#fff0f6; padding:14px; border-radius:12px; text-align:center; color:#c61f63; font-weight:600 }
-    .day-title{ color:#c2185b; margin-bottom:8px }
-    footer{ text-align:center; padding:14px; color:#8a3a5b }
-    .hero{ display:flex; gap:18px; align-items:center }
-    .hero img{ width:120px; height:120px; border-radius:18px; object-fit:cover; border:4px solid #ffbfdc }
-    .btn{ width:100%; padding:12px; background:#ff5c8a; color:white; border:none; border-radius:12px; font-size:16px; cursor:pointer }
-    .small{ font-size:13px; color:#7a4a66 }
+    .exercise{ margin:12px 0; padding:10px; border-left:4px solid #ff5c8a; border-radius:8px; background:#fff0f6 }
+    .exercise h3{ margin:0 0 6px 0; color:#e64587 }
+    .exercise p{ margin:0; font-size:14px }
+    .motivation{ background:#fff0f6; padding:14px; border-radius:12px; text-align:center; color:#c61f63; font-weight:600; margin-top:10px }
+    .day-title{ color:#c2185b; margin-bottom:8px; font-weight:bold; font-size:18px }
+    .hero h2{ margin:0;color:#b71c58; font-size:22px; }
+    .hero p{ font-size:16px; color:#c2185b; margin-top:4px }
+    .btn{ width:100%; padding:12px; background:#ff5c8a; color:white; border:none; border-radius:12px; font-size:16px; cursor:pointer; margin-top:10px }
+    a{ color:#ff1f75; text-decoration:none; font-weight:bold; }
+    a:hover{ text-decoration:underline; }
   </style>
 </head>
 <body>
-  <header>💖 Rutina Diaria para Pristaly — Hecha con Amor 💖</header>
+  <header>💖 Programa de Ejercicio para Pristaly 💖</header>
   <div class="container">
 
     <div class="card hero">
-      <img src="https://i.imgur.com/Qr6Yx1V.png" alt="Perfil Pristaly">
-      <div>
-        <h2 style="margin:0;color:#b71c58">Hola Pristaly 😍✨</h2>
-        <p class="small">Cada día una rutina diferente — nivel: Principiante. Mensajes románticos y emojis incluidos.</p>
+      <h2>Hola Pristaly 😍✨</h2>
+      <p>Hoy es un día perfecto para sentirte fuerte y hermosa 💕💪</p>
+    </div>
+
+    <!-- Rutinas por día -->
+    <div class="card">
+      <div class="day-title">✨ Lunes ✨</div>
+      <div class="exercise">
+        <h3>Sentadillas 💪💗</h3>
+        <p>Pies al ancho de hombros, baja controlando, mira al frente. 🌸✨</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=aclHkVaku9U" target="_blank">Video de Sentadillas</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Zancadas 3x12 cada pierna 🍑</h3>
+        <p>Paso largo, rodilla no sobrepasa el pie, baja con control.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=QOVaHwm-Q6U" target="_blank">Video de Zancadas</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Caminata 20 min 🚶‍♀️</h3>
+        <p>Ritmo cómodo, respira profundo.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=O1Z_VH5Xkk0" target="_blank">Video Caminata</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Plancha 30s 🌟</h3>
+        <p>Abdomen firme, espalda recta.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=pSHjTRCQxIw" target="_blank">Video Plancha</a></p>
       </div>
     </div>
 
-    <!-- Rutina del día -->
+    <!-- Puedes copiar y pegar otra card para Martes, Miércoles… -->
     <div class="card">
-      <div class="day-title">✨ Tu rutina de hoy ✨</div>
-      <div id="exerciseList"></div>
+      <div class="day-title">✨ Martes ✨</div>
+      <div class="exercise">
+        <h3>Crunches 3x15 💗</h3>
+        <p>Sube con el core, evita jalar cuello. 🌸</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=Xyd_fa5zoEU" target="_blank">Video Crunches</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Elevación de piernas 3x12 💪</h3>
+        <p>Controla al subir y bajar, sin impulso.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=JB2oyawG9KI" target="_blank">Video Elevación de piernas</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Abdominal bicicleta 3x20 🚴‍♀️</h3>
+        <p>Movimiento lento y controlado.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=9FGilxCbdz8" target="_blank">Video Bicicleta</a></p>
+      </div>
+      <div class="exercise">
+        <h3>Plancha lateral 30s 🌟</h3>
+        <p>Cuerpo alineado, respira lento.</p>
+        <p>💻 <a href="https://www.youtube.com/watch?v=K2VljzCC16g" target="_blank">Video Plancha lateral</a></p>
+      </div>
     </div>
 
-    <div class="card motivation" id="motivationBox">Eres mi inspiración, Pristaly 💕 Hoy te espero para celebrar tus logros.</div>
-
+    <!-- Motivación -->
+    <div class="motivation" id="motivationBox">Eres mi inspiración, Pristaly 💕 Hoy te espero para celebrar tus logros.</div>
     <button class="btn" onclick="newMotivation()">💞 Dame otra frase bonita 💞</button>
 
-    <footer>
-      <p class="small">Abre esta página a diario. Si quieres imágenes reales en el PDF, envíamelas y las incrusto.</p>
-    </footer>
   </div>
 
   <script>
-    // Rutinas detalladas por día (lunes=1..domingo=0 for Date.getDay compatibility)
-    const routines = {
-      1: [
-        { name: "Sentadillas - 3x12", img: "https://i.imgur.com/yN1q3w7.png", desc: "Pies al ancho de hombros, baja controlando, mira al frente." },
-        { name: "Zancadas - 3x12 cada pierna", img: "https://i.imgur.com/VrCjm8F.png", desc: "Paso largo, rodilla no sobrepasa el pie, baja con control." },
-        { name: "Caminata 20 min", img: "https://i.imgur.com/zUm4W4K.png", desc: "Ritmo cómodo, respira profundo." }
-      ],
-      2: [
-        { name: "Crunches - 3x15", img: "https://i.imgur.com/pPj1lfb.png", desc: "Sube con el core, evita jalar cuello." },
-        { name: "Elevación de piernas - 3x12", img: "https://i.imgur.com/ZkqJNFN.png", desc: "Controla al subir y bajar, sin impulso." },
-        { name: "Plancha lateral 30s", img: "https://i.imgur.com/W1qo3JY.png", desc: "Cuerpo alineado, respira lento." }
-      ],
-      3: [
-        { name: "Puente de glúteo - 3x15", img: "https://i.imgur.com/7pk7gWZ.png", desc: "Aprieta glúteos arriba, baja suave." },
-        { name: "Patada hacia atrás - 3x12", img: "https://i.imgur.com/V8wkjmU.png", desc: "Mantén torso estable, controla el movimiento." },
-        { name: "Fire Hydrants - 3x15", img: "https://i.imgur.com/8DbYQdC.png", desc: "Movimiento lateral de cadera, sin rotar el torso." }
-      ],
-      4: [
-        { name: "Caminata rápida 25 min", img: "https://i.imgur.com/zUm4W4K.png", desc: "Incrementa ligeramente el ritmo para sudar." },
-        { name: "Jumping Jacks - 3x20", img: "https://i.imgur.com/3Yp4GQy.png", desc: "Aterriza suave, usa brazos para ritmo." },
-        { name: "Burpees 2x8", img: "https://i.imgur.com/1kXq3hV.png", desc: "Hazlos a ritmo cómodo, puedes simplificar sin salto." }
-      ],
-      5: [
-        { name: "Full Body - circuito 3 rondas", img: "https://i.imgur.com/4k7Pq3L.png", desc: "Sentadillas, flexiones modificadas, remo con banda - 12 reps cada ejercicio." },
-        { name: "Plancha 40s", img: "https://i.imgur.com/7vTIW8O.png", desc: "Cuerpo alineado, respira, aprieta abdomen." }
-      ],
-      6: [
-        { name: "Core + Glúteo", img: "https://i.imgur.com/6hTq4sJ.png", desc: "Abdominales suaves, puente de glúteo y caminata ligera." }
-      ],
-      0: [
-        { name: "Descanso Activo & Estiramientos", img: "https://i.imgur.com/5Xxq1Lk.png", desc: "15 min estiramiento, respiración y yoga suave." }
-      ]
-    };
-
     const motivations = [
       "Estoy tan orgulloso de ti, Pristaly 💖✨",
       "Cada día eres más fuerte y hermosa 😍🔥",
@@ -92,31 +94,10 @@
       "Nunca te rindas, princesa. Yo creo en ti 💓👑",
       "Eres magia, mi amor ✨💞"
     ];
-
-    function loadRoutine(){
-      const day = new Date().getDay(); // 0 domingo..6 sabado
-      const todayRoutine = routines[day] || [];
-      const container = document.getElementById('exerciseList');
-      container.innerHTML = '';
-      todayRoutine.forEach(ex => {
-        container.innerHTML += `
-          <div class="exercise">
-            <img src="${ex.img}" alt="${ex.name}">
-            <div class="info">
-              <h3>${ex.name} 💗</h3>
-              <p>${ex.desc}</p>
-            </div>
-          </div>`;
-      });
-    }
-
     function newMotivation(){
       const box = document.getElementById('motivationBox');
       box.innerHTML = motivations[Math.floor(Math.random()*motivations.length)];
     }
-
-    // carga inicial
-    loadRoutine();
   </script>
 </body>
 </html>
